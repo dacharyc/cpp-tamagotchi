@@ -18,10 +18,17 @@ if(NOT ftxui_POPULATED)
 endif()
 
 add_executable(cpp-tomagotchi
-  main.cpp
+        main.cpp
+        screens/onboarding.hpp
+        screens/onboarding.cpp
+        screens/pet-shop.hpp
+        screens/pet-shop.cpp
+        screens/menagerie.hpp
+        screens/menagerie.cpp
 )
 
 target_link_libraries(cpp-tomagotchi 
-  PRIVATE ftxui::dom
-  PRIVATE ftxui::screen
+        PRIVATE ftxui::dom
+        PRIVATE ftxui::screen
+        PRIVATE ftxui::component
 )
